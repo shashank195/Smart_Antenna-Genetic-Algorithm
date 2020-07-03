@@ -45,8 +45,8 @@ for i=1:individuos
     polar(thetha,AF(i,:))
     hold on
 end
-title('Indivíduos da primeira geração')
-legend('Direção do raio de incidência','Location','southoutside')
+title('First generation individuals')
+legend('Incidence radius direction', 'Location', 'southoutside')
 
 best1=AF(1,DDI);
 index1=1;
@@ -131,8 +131,8 @@ hold on
 b3 = polar(thetha,bestAF1_2, 'r');
 hold on
 b4 = polar(thetha,bestAF2_2, 'r');
-title('Melhores soluções')
-legend('Direção do raio de incidencia','Primeiro melhor','Segundo melhor','Primeiro melhor depois do cruzamento','Segundo melhor depois do cruzamento','Location','southoutside')
+title('Best Solutions')
+legend('Incidence radius direction', 'First best', 'Second best', 'First best after crossing', 'Second best after crossing', 'Location', 'southoutside')
 set(b3, 'linewidth',2)
 set(b4, 'linewidth',2)
 
@@ -142,8 +142,8 @@ hold on
 for i=1:individuos
     polar(thetha,AF2(i,:))
 end
-title('Indivíduos da segunda geração')
-legend('Direção do raio de incidência','Location','southoutside')
+title('Second generation individuals')
+legend('Incidence radius direction', 'Location', 'southoutside')
 
 
 figure(4)
@@ -151,8 +151,8 @@ interacoes=[1 2];
 plot(interacoes,[best1 best1_2],'b')
 hold on;
 plot(interacoes, [best2 best2_2],'r')
-title('Comparação de ganho entre primeira e segunda geração')
-legend('Primeiro melhor','Segundo melhor')
+title('Comparison of gain between first and second generation')
+legend('First best', 'Second best')
 
 
 DirTx = DDI 
