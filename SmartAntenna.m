@@ -159,8 +159,8 @@ DirTx = DDI
 
 DirInt = (randi([1,180]))
 
-GanhoTx = bestAF1_2(DDI)
-GanhoInt = bestAF1_2(DirInt)
+GainTx = bestAF1_2(DDI)
+GainInt = bestAF1_2(DirInt)
 
 dist=(1:1:5000);
 
@@ -170,5 +170,5 @@ Gr=1;
 
 lambda=1/2.5E9;
 
-Pr=Pt*Gr*GanhoTx*(lambda./(4*pi*dist)).^2;
+Pr=Pt*Gr*GainTx*(lambda./(4*pi*dist)).^2;
 
