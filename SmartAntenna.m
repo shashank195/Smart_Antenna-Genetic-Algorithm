@@ -147,10 +147,10 @@ legend('Incidence radius direction', 'Location', 'southoutside')
 
 
 figure(4)
-interacoes=[1 2];
-plot(interacoes,[best1 best1_2],'b')
+interactions=[1 2];
+plot(interactions,[best1 best1_2],'b')
 hold on;
-plot(interacoes, [best2 best2_2],'r')
+plot(interactions, [best2 best2_2],'r')
 title('Comparison of gain between first and second generation')
 legend('First best', 'Second best')
 
