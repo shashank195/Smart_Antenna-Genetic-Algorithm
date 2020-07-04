@@ -3,7 +3,7 @@ clear all
 close all
 format compact
 
-N = 7;
+N=7;
 
 d=0.5;
 
