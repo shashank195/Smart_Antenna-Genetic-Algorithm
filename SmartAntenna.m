@@ -7,17 +7,17 @@ N = 7;
 
 d=0.5;
 
-individuos = 25;
+individuals = 25;
 
-thetha_zero=zeros(N,individuos);
-for indiv = 1:individuos
+thetha_zero=zeros(N,individuals);
+for indiv = 1:individuals
     for n=1:N
         thetha_zero(n,indiv)=randi([0,180]);
     end
 end
 
-AF=zeros(individuos,360);
-for i=1:individuos
+AF=zeros(individuals,360);
+for i=1:individuals
     AF(i,:)=ArrayFactor(d,N,thetha_zero(:,i));
 end
 
@@ -26,7 +26,7 @@ DDI=(randi([0,180]));
 thetha_inc=deg2rad(DDI);
 
 R = max(AF(1));
-for i=2:individuos
+for i=2:individuals
     R_ = max(AF(i));
     if R_ > R
         R = R_;
@@ -41,7 +41,7 @@ thetha=[1:1:360];
 thetha=deg2rad(thetha);
 
 figure(1)
-for i=1:individuos
+for i=1:individuals
     polar(thetha,AF(i,:))
     hold on
 end
@@ -51,7 +51,7 @@ legend('Incidence radius direction', 'Location', 'southoutside')
 best1=AF(1,DDI);
 index1=1;
 bestAF1=AF(1,:);
-for i=2:individuos
+for i=2:individuals
     if best1<AF(i,DDI)
         best1=AF(i,DDI);
         bestAF1=AF(i,:);
@@ -61,7 +61,7 @@ end
 best2=AF(1,DDI);
 index2=1;
 bestAF2=AF(i,:);
-for i=2:individuos
+for i=2:individuals
     if best2<AF(i,DDI) && i ~= index1
         best2=AF(i,DDI);
         bestAF2=AF(i,:);
@@ -81,7 +81,7 @@ set(b2, 'linewidth',1)
 p1=thetha_zero(:,index1)';
 p2=thetha_zero(:,index2)';
 
-xover =(randi([0 1],N,individuos))';
+xover =(randi([0 1],N,individuals))';
 xover = unique(xover,'rows')';
 L=length(xover);
 for l=1:L
@@ -91,11 +91,11 @@ end
 child=child_prt1+child_prt2;
 
 
-individuos = L;
+individuals = L;
 thetha_zero=child;
 
-AF2=zeros(individuos,360);
-for i=1:individuos
+AF2=zeros(individuals,360);
+for i=1:individuals
     AF2(i,:)=ArrayFactor(d,N,thetha_zero(:,i));
 end
 
@@ -104,7 +104,7 @@ best1_2=AF2(1,DDI);
 index1_2=1;
 bestAF1_2=AF2(1,:);
 
-for i=2:individuos
+for i=2:individuals
     if best1_2<AF2(i,DDI)
         best1_2=AF2(i,DDI);
         bestAF1_2=AF2(i,:);
@@ -117,7 +117,7 @@ end
 best2_2=AF2(1,DDI);
 index2_2=1;
 bestAF2_2=AF2(1,:);
-for i=2:individuos
+for i=2:individuals
     if best2_2<AF2(i,DDI) && i ~= index1_2 && AF2(i,DDI)~= best1_2
         best2_2=AF2(i,DDI);
         bestAF2_2=AF2(i,:);
@@ -139,7 +139,7 @@ set(b4, 'linewidth',2)
 figure(3)
 compass(complx_inc,'g')
 hold on
-for i=1:individuos
+for i=1:individuals
     polar(thetha,AF2(i,:))
 end
 title('Second generation individuals')
