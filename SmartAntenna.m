@@ -230,11 +230,11 @@ Gr=1;
 lambda=1/2.5E9;
 % Friis formula finds the power received
 Pr=Pt*Gr*GainTx*(lambda./(4*pi*dist)).^2;
-% figure (5)
-% semilogy (dist, Pr)
 
-% title ('Friis formula for the system')
-% legend ('Received Power (W) over distance (meters)')
+figure (5)
+semilogy (dist, Pr)
+title ('Friis formula for the system')
+legend ('Received Power (W) over distance (meters)')
 
 % improvements for the project:
 % -consider interference and try to minimize this
