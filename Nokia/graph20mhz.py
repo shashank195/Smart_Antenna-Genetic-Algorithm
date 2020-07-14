@@ -7,8 +7,8 @@ plt.title("Attenuation produced by 1m of snow for 5m base fed vertical antenna a
 plt.xlabel('Elevation angle (deg)')
 plt.ylabel('Attenuation introduced by 1mtr of snow (db)')
 
-x1 = np.array([2, 5, 10,11, 15, 30])
-y1 = np.array([12, 6, 1.2,1, 1, 1])
+x1 = np.array([2,5,7,10,11,15,30])
+y1 = np.array([12,6,3,1.2,1,1,1])
 plt.plot(x1, y1, label='Dry snow')
 
 x2 = np.array([2,3,4,5,6,10,11,13,15,20,25,30])
