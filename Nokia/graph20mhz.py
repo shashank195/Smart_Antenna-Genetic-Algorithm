@@ -18,6 +18,7 @@ plt.plot(x2, y2, label='Wet snow')
 
 plt.text(24, 1.5, 'Dry snow')
 plt.text(24, 5, 'Wet snow')
+plt.text(15, 15, 'Conducting ground screen')
 plt.text(32, 24, '© Robert W. Jenkins-IEEE Signal processing letters,Sept 1973')
 
 plt.show()
