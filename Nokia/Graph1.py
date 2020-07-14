@@ -19,5 +19,8 @@ x3 = np.array([0, 1, 2, 3, 4])
 y3 = np.array([0, 1.75, 3.75, 5.75, 8.75])
 plt.plot(x3, y3,label='Antenna Height-7.5m')
 
+plt.text(1.5, 8.5, 'Antenna Height-2.5m')
+plt.text(2, 6, 'Antenna Height-5.0m')
+plt.text(2.8, 5, 'Antenna Height-7.5m')
 
 plt.show()
