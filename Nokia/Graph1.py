@@ -9,15 +9,15 @@ plt.ylabel('Attenuation at 20deg elevation(bB)')
 
 x1 = np.array([0, 0.5, 1, 2, 2.3])
 y1 = np.array([0, 1.5, 3, 6, 8])
-plt.plot(x1, y1)
+plt.plot(x1, y1, label='Antenna Height-2.5m')
 
 x2 = np.array([0, 1, 2, 3, 4])
 y2 = np.array([0, 2, 4, 6, 9])
-plt.plot(x2, y2)
+plt.plot(x2, y2,label='Antenna Height-5.0m')
 
 x3 = np.array([0, 1, 2, 3, 4])
 y3 = np.array([0, 1.75, 3.75, 5.75, 8.75])
-plt.plot(x3, y3)
+plt.plot(x3, y3,label='Antenna Height-7.5m')
 
 
 plt.show()
