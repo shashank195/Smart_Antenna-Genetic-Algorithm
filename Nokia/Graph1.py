@@ -15,9 +15,5 @@ x3 = np.array([0, 1, 2, 3, 4])
 y3 = np.array([0, 1.75, 3.75, 5.75, 8.75])
 plt.plot(x3, y3)
 
-ax.set(xlabel='time (s)', ylabel='voltage (mV)',
-       title='About as simple as it gets, folks')
-ax.grid()
 
-fig.savefig("test.png")
 plt.show()
