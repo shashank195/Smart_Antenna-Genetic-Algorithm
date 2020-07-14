@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import *
 
+plt.title("Attenuation produced at 20deg elevation angle,as function of snow depth for wet snow on good earth and at various antenna height upto 7.5m (X/4) at 10Mhz ")
 plt.xlabel('Snow Depth (in meters)')
 plt.ylabel('Attenuation at 20deg elevation(bB)')
 
