@@ -13,14 +13,15 @@ plt.plot(x1, y1, label='Antenna Height-2.5m')
 
 x2 = np.array([0, 1, 2, 3, 4])
 y2 = np.array([0, 2, 4, 6, 9])
-plt.plot(x2, y2,label='Antenna Height-5.0m')
+plt.plot(x2, y2, label='Antenna Height-5.0m')
 
 x3 = np.array([0, 1, 2, 3, 4])
 y3 = np.array([0, 1.75, 3.75, 5.75, 8.75])
-plt.plot(x3, y3,label='Antenna Height-7.5m')
+plt.plot(x3, y3, label='Antenna Height-7.5m')
 
 plt.text(1.5, 8.5, 'Antenna Height-2.5m')
-plt.text(2, 6, 'Antenna Height-5.0m')
+plt.text(2, 7, 'Antenna Height-5.0m')
 plt.text(2.8, 5, 'Antenna Height-7.5m')
+plt.text(4.5, 9, '© Robert W. Jenkins-IEEE Signal processing letters,Sept 1973')
 
 plt.show()
