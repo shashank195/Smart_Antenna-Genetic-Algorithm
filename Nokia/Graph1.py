@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import *
 
+plt.xlabel('Snow Depth (in meters)')
+plt.ylabel('Attenuation at 20deg elevation(bB)')
+
 x1 = np.array([0, 0.5, 1, 2, 2.3])
 y1 = np.array([0, 1.5, 3, 6, 8])
 plt.plot(x1, y1)
