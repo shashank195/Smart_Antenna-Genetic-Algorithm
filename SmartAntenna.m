@@ -218,24 +218,6 @@ DirInt = (randi([1,180]))
 GainTx = bestAF1_2(DDI)
 GainInt = bestAF1_2(DirInt)
 
-% ====== FRIIS FORMULA STUDY =========
-% distance in meters between Rx and Tx
-dist=(1:1:5000);
-% Power Transmitted in Watts
-Pt=1;
-% Gain Receiver (0dBi) Db over isotropic antenna
-Gr=1;
-% Transmitter Gain above
-% Operating wavelength (4G) in Hz
-lambda=1/2.5E9;
-% Friis formula finds the power received
-Pr=Pt*Gr*GainTx*(lambda./(4*pi*dist)).^2;
-
-figure (5)
-semilogy (dist, Pr)
-title ('Friis formula for the system')
-legend ('Received Power (W) over distance (meters)')
-
 % improvements for the project:
 % -consider interference and try to minimize this
 % -consider multiple users and try to maximize these
