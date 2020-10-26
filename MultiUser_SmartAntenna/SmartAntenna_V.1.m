@@ -45,22 +45,15 @@ end
 % DIRECTION OF INCIDENCE
 
 %FIXED
-DDI = 60;
-DDI1 = 120;
-thetha_inc = deg2rad (DDI);
+DDI1 = 60;
+DDI2 = 120;
 thetha_inc1 = deg2rad (DDI1);
+thetha_inc2 = deg2rad (DDI2);
 % direction of incidence radius (random)
 %DDI=(randi([0,180]));
 %thetha_inc=deg2rad(DDI);
 
 % for better viewing leaves the same size as AF
-R = max(AF(1));
-for i=2:individuals
-    R_ = max(AF(i));
-    if R_ > R
-        R = R_;
-    end
-end
 R1 = max(AF(1));
 for i=2:individuals
     R_ = max(AF(i));
@@ -68,14 +61,21 @@ for i=2:individuals
         R1 = R_;
     end
 end
+R2 = max(AF(1));
+for i=2:individuals
+    R_ = max(AF(i));
+    if R_ > R2
+        R2 = R_;
+    end
+end
 
 % converts to complex
-complx_inc = R.*exp(1i*thetha_inc);
 complx_inc1 = R1.*exp(1i*thetha_inc1);
+complx_inc2 = R2.*exp(1i*thetha_inc2);
 figure(1)
-compass(complx_inc,'g')
+compass(complx_inc1,'g')
 hold on
-compass(complx_inc1,'r')
+compass(complx_inc2,'r')
 hold on
 
 thetha=[1:1:360];
